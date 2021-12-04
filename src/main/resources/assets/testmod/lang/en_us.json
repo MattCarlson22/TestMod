@@ -4,5 +4,7 @@
   "item.testmod.raw_titanium": "Raw Titanium",
 
   "block.testmod.titanium_block": "Titanium Block",
-  "block.testmod.titanium_ore": "Titanium Ore"
+  "block.testmod.titanium_ore": "Titanium Ore",
+
+  "itemGroup.testModTab": "Test Tab"
 }
