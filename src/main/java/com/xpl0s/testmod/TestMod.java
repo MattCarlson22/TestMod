@@ -1,5 +1,6 @@
 package com.xpl0s.testmod;
 
+import com.xpl0s.testmod.block.ModBlocks;
 import com.xpl0s.testmod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -32,6 +33,7 @@ public class TestMod
         eventBus.addListener(this::setup);
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
 
         MinecraftForge.EVENT_BUS.register(this);
