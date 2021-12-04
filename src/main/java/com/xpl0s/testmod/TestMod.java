@@ -1,5 +1,6 @@
 package com.xpl0s.testmod;
 
+import com.xpl0s.testmod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -23,14 +24,16 @@ import java.util.stream.Collectors;
 public class TestMod
 {
     public static final String MOD_ID = "testmod";
-    private static final Logger LOGGER = LogManager.getLogger();
 
+    private static final Logger LOGGER = LogManager.getLogger();
 
     public TestMod() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         eventBus.addListener(this::setup);
 
-        // Register ourselves for server and other game events we are interested in
+        ModItems.register(eventBus);
+
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
